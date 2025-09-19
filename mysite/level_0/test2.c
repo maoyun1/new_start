@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include <unistd.h> // 需要包含这个头文件以使用 getcwd
 int main()
 {
     printf("请输入key:(输入Quit退出)\n");
