@@ -3,20 +3,7 @@
 #include<string.h>
 #include <unistd.h> // 需要包含这个头文件以使用 getcwd
 int main()
-{   
-
-    
-    char cwd[1024];
-    if (getcwd(cwd, sizeof(cwd)) != NULL) {
-        printf("当前工作目录: %s\n", cwd);
-    } else {
-        perror("getcwd() error");
-        return 1;
-    }
-
-
-
-
+{
     printf("请输入key:(输入Quit退出)\n");
     char input[100];
     scanf("%s",input);
