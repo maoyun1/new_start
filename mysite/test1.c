@@ -1,21 +1,23 @@
 #include<stdio.h>
+#include<string.h>
 int main()
-{
-    printf("请输入：\n");
-    char ch;
-    scanf("%c",&ch);
-    while(ch!='quit'&&ch!='Quit')
+{   
+    printf("请输入：(输入Quit退出)\n");   
+    char input[100];
+    scanf("%s",input);
+    while(strcmp(input,"Quit")!=0&&strcmp(input,"quit")!=0)
     {
-        if(ch=='Dian'||ch=='dian')
+        if(strcmp(input,"Dian"))
         {
             printf("2002\n");
-            while(scanf(ch)!='\n');
+            while(getchar()!='\n');
         }
         else 
         {
             printf("Error\n");
-            while(scanf(ch)!='\n');
+            while(getchar()!='\n');
         }
+         printf("请输入：(输入Quit退出)\n");
     }
     return 0;
 }
