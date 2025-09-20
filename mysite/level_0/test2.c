@@ -3,7 +3,7 @@
 #include<string.h>
 int main()
 {
-    FILE *file = fopen("C:\\Users\\31567\\Desktop\\new_start\\mysite\\level_0\\data.txt", "r"); 
+    FILE *file = fopen("data.txt", "r"); 
     if(file==NULL)
     {
         printf("文件打开错误\n");
