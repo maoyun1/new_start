@@ -20,8 +20,8 @@ int main()
         break;
     }        
      rewind(file);
-    char line[100];
-
+      char line[100];
+       int found=0;
        while(fgets(line,sizeof(line),file))
        { 
        char *colon_pos=strchr(line,':');
@@ -35,16 +35,16 @@ int main()
         if(strcmp(input,key)==0)
             {
             printf("文件中找到了：%s,且其值为：%s\n",input,value);
+            found=1;
             break;
-           
             }
-           else
-           {  
-            printf("Error\n");
-            }              
+                    
         }
-        fclose(file);
+         if(!found)   {  
+            printf("Error\n");
+            }    
     }
-        return 0;
+      fclose(file);  
+    return 0;
 }
         
