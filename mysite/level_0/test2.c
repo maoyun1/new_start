@@ -8,10 +8,11 @@ int main()
     scanf("%s",input);
     while(strcmp(input,"Quit")!=0)
     {
-    FILE *file=fopen("data.txt","r");
+    FILE *file = fopen("C:\\Users\\31567\\Desktop\\new_start\\mysite\\level_0\\data.txt", "r"); 
     if(file==NULL)
     {
         printf("文件打开错误\n");
+    
         return 1;
     }
     char line[100];
@@ -32,6 +33,7 @@ int main()
     {
         printf("Error\n");
     }
+    fclose(file);
     }
     return 0;
 }
